@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const MyImage = ({ imgs }) => {
-  let tempImg = imgs[0]
-  const [mainImage, setMainImage] = useState(tempImg);
+  // let tempImg = imgs[0]
+  // const [mainImage, setMainImage] = useState(tempImg);
   const [totImages, settotImages] = useState(imgs);
   // useEffect(()=>{
   //   if(imgs.length>0){
@@ -14,7 +14,7 @@ const MyImage = ({ imgs }) => {
   // },[])
 
   useEffect(() => {
-    setMainImage(tempImg);
+    // setMainImage(tempImg);
     settotImages(imgs)
   }, [imgs])
 
@@ -30,7 +30,7 @@ const MyImage = ({ imgs }) => {
                 alt={curElm}
                 className="box-image--style"
                 key={index}
-                onClick={() => setMainImage(curElm)}
+                // onClick={() => setMainImage(curElm)}
               />
             </figure>
           );

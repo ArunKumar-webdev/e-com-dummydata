@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Product = (curElem,ProductGet,UpdateProduct,ProductDelete) => {
-  const { id, title, price, category,thumbnail } = curElem;
+  const { id, title, price, thumbnail } = curElem;
 
   
   return (

@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import FilterSection from "./components/FilterSection";
 import ProductGridView from "./components/ProductGridView";
 import Pagination from "./Pagination";
-import { Button } from "./styles/Button";
 import './App.css'
 
 let lastName = '';
@@ -104,33 +102,6 @@ const ProductsPage = () => {
       });
   }
 
-
-  const UpdateProduct = id => {
-    window.location = `/update/${id}`
-  }
-
-  const ProductDelete = id => {
-    var data = {
-      'id': id
-    }
-    fetch(`https://dummyjson.com/products/${id}`, {
-      method: 'DELETE',
-      headers: {
-        Accept: 'application/form-data',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then(res => res.json())
-      .then(
-        (result) => {
-          alert('Product deleted,You can check in the network tab')
-
-          ProductGet();
-
-        }
-      )
-  }
   // console.log(products)
   if (loading) {
     return <h2>Loading....</h2>
