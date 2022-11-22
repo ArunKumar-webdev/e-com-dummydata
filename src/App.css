@@ -1,0 +1,53 @@
+.paginationBox {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.page-item {
+  background-color: skyblue;
+  list-style: none;
+  border: 1px solid skyblue;
+  border-left: 1px solid white;
+  padding: 1vmax 1.5vmax;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.page-item:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.page-item:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.page-link {
+  text-decoration: none;
+  font: 14px "Roboto";
+  color: white;
+  transition: all 0.3s;
+}
+
+.page-item:hover {
+  background-color: blue;
+
+}
+
+.page-item:hover .page-link {
+  color: beige
+}
+
+.pageItemactive {
+  background-color: blue;
+}
+
+.pageLinkActive {
+  color: black;
+}

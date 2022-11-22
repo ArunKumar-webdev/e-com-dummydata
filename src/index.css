@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.filter-search,
+input {
+  border-radius: 15px !important;
+  display: flex;
+  align-items: center;
+  width: 160px;
+  margin-right: 8px;
+}
+
+.product-view--sort {
+  margin-top: 50px;
+}
+
+.selectcategorgy {
+  border: 2px solid skyblue !important;
+  border-radius: 8px !important;
+  background: skyblue !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .smfilterlist{
+    display: grid !important;
+    grid-template-columns: 210px 210px !important;
+  }
+  .smfilterlistheader{
+    margin-left: 10px;
+  }
+}
