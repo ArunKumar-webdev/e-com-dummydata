@@ -77,9 +77,17 @@ const ProductsPage = () => {
   }
   // console.log(categoryOptions)  
 
-  const handleFilter = (value) => {
-    debugger
+  const sortBy = (value) => {
+    if (value.target.value === 'Low-High') {
+      const numAscending = [...products].sort((a, b) => a.price - b.price);
+      setProducts(numAscending)
+    } else if (value.target.value === 'High-Low') {
+      const numDesending = [...products].sort((a, b) => b.price - a.price);
+      setProducts(numDesending)
+    }
+  }
 
+  const handleFilter = (value) => {
     if (document.getElementById('button' + value).className.length > 0) {
       document.getElementById('button' + value).className = '';
     } else {
@@ -132,7 +140,7 @@ const ProductsPage = () => {
     <Wrapper>
       <div className="container grid grid-filter-column mb-10">
         <div>
-          <FilterSection categoryOptions={categoryOptions} handleSearch={handleSearch} handleReset={handleReset} handleFilter={handleFilter} search={search} setSearch={setSearch} />
+          <FilterSection categoryOptions={categoryOptions} sortBy={sortBy} handleSearch={handleSearch} handleReset={handleReset} handleFilter={handleFilter} search={search} setSearch={setSearch} />
         </div>
 
         <section className="product-view--sort">

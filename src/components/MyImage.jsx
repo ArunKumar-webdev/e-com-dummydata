@@ -24,7 +24,7 @@ const MyImage = ({ imgs }) => {
         {imgs && imgs.map((curElm, index) => {
           // console.log(curElm)
           return (
-            <figure>
+            <figure key={index}>
               <img
                 src={curElm}
                 alt={curElm}
@@ -48,8 +48,8 @@ const MyImage = ({ imgs }) => {
           
         >
           {totImages.map((img, index)=>{
-            return <SwiperSlide>
-              <img src={img} alt={index} />
+            return <SwiperSlide key={index}>
+              <img src={img} key={index} alt={''} />
             </SwiperSlide>
           })}
         </Swiper>

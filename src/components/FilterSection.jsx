@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button } from "../styles/Button";
 
-const FilterSection = ({ search, setSearch, handleSearch, handleReset, handleFilter, categoryOptions }) => {
+const FilterSection = ({ search, setSearch, handleSearch, handleReset, handleFilter, categoryOptions, sortBy }) => {
 
   return (
     <Wrapper>
@@ -23,9 +23,21 @@ const FilterSection = ({ search, setSearch, handleSearch, handleReset, handleFil
           </Button>
         </div>
       </div>
+      <div>
+        <label style={{ fontWeight: '700', fontSize: '18px' }}>Sort By Price</label>
+        <select style={{
+          marginTop: '10px', color: '#212529', padding: '1.6rem 2.4rem', border: '1px solid rgba(98,84,243,0.5)',
+          boxShadow: 'rgb(0 0 0 / 16%) 0px 1px 4px'
+        }}
+          className="filter-search" defaultValue='' onChange={sortBy}>
+          <option hidden value="">Select Sort Type</option>
+          <option value='Low-High'>Low-High</option>
+          <option value='High-Low'>High-Low</option>
+        </select>
+      </div>
 
       <div className="filter-category">
-        <h3 className="smfilterlistheader" style={{fontWeight: 700}}>Category</h3>
+        <h3 className="smfilterlistheader" style={{ fontWeight: '700' }}>Category</h3>
         <div className="smfilterlist">
           {categoryOptions.map((curElem, index) => {
             return (
